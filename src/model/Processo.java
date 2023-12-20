@@ -1,7 +1,8 @@
 package model;
 
 import java.util.Date;
-
+import java.util.List;
+import java.util.ArrayList;
 
 public class Processo {
     
@@ -18,11 +19,12 @@ public class Processo {
     private StatusEnum status;
     private Professor prof_relator;
     private Assunto assunto;
-    private Aluno participante;
     private Curso curso;
+    private List<Aluno> alunosInteressados;
     
     public Processo(Assunto assunto) {
         this.assunto = assunto;
+        this.alunosInteressados = new ArrayList<>();
     }
 
     public void setTipoDecisao(TipoDecisao decisaoRelator) {
@@ -30,8 +32,8 @@ public class Processo {
     }
 
     public void registrarAlunos(Aluno aluno) {
-        // Lógica para registrar alunos interessados no processo
-        // Pode adicionar alunos em uma lista de alunos interessados no processo
+        // Adiciona o aluno à lista de alunos interessados no processo
+        this.alunosInteressados.add(aluno);
     }
 
     public void mudarEstado(StatusEnum novoEstado) {

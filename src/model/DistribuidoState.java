@@ -8,7 +8,7 @@ public class DistribuidoState implements ProcessoState {
 
     @Override
     public void pautar(Processo processo) {
-        processo.setEstado(new EmPautaState());
+        processo.mudarEstado(new EmPautaState());
     }
 
     @Override

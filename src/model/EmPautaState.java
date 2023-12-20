@@ -13,7 +13,7 @@ public class EmPautaState implements ProcessoState {
 
     @Override
     public void julgar(Processo processo) {
-        processo.setEstado(new EmJulgamentoState());
+        processo.mudarEstado(new EmJulgamentoState());
     }
 
     @Override

@@ -17,4 +17,8 @@ public User (String username, String password) {
 
 public void addAuthority(String string) {
 }
+
+public Object getUsername(username name) {
+    return name;
+}
 }
