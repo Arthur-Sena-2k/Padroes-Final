@@ -1,6 +1,9 @@
 package model;
 public class Usuario {
 
+    public Usuario(String nome) {
+        this.nome = nome;
+    }
     private Integer id;
     private String nome;
     private String fone;
