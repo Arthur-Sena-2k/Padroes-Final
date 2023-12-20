@@ -14,6 +14,7 @@ public class EmPautaState implements ProcessoState {
     @Override
     public void julgar(Processo processo) {
         processo.mudarEstado(new EmJulgamentoState());
+        System.out.println("Processo em julgamento!");
     }
 
     @Override

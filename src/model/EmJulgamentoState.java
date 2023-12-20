@@ -15,6 +15,7 @@ public class EmJulgamentoState implements ProcessoState {
     public void julgar(Processo processo) {
         // Lógica adicional, se necessário, quando já estiver em julgamento
         processo.mudarEstado(new JulgadoState());
+        System.out.println("Processo julgado!");
     }
 
     @Override

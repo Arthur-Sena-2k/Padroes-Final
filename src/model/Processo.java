@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 
+
 public class Processo {
     
     private Integer id;
@@ -16,7 +17,7 @@ public class Processo {
     private TipoVoto voto;
     private String texto;
     private String justificativa;
-    private StatusEnum status;
+    private ProcessoState status;
     private Professor prof_relator;
     private Assunto assunto;
     private Curso curso;
@@ -36,7 +37,31 @@ public class Processo {
         this.alunosInteressados.add(aluno);
     }
 
-    public void mudarEstado(StatusEnum novoEstado) {
+    public void mudarEstado(ProcessoState novoEstado) {
         this.status = novoEstado;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public void setDescricao(String descricao) {
+        this.texto = descricao;
+    }
+
+    public void pautar() {
+        this.status.pautar(this);
+    }
+
+    public void distribuir() {
+        this.status.distribuir(this);
+    }
+
+    public void julgar() {
+        this.status.julgar(this);
+    }
+
+    public List<Aluno> getAlunosInteressados() {
+        return alunosInteressados;
     }
 }

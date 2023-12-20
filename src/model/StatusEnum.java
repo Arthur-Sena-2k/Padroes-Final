@@ -66,4 +66,21 @@ public class StatusEnum {
     public String getDescricao() {
         return state.getDescricao();
     }
+
+    private void inicializarSistema() {
+        carregarConfiguracoes();
+        inicializarRecursos();
+    }
+
+    private void carregarConfiguracoes() {
+        System.out.println("Carregando configurações do sistema...");
+    }
+
+    private void inicializarRecursos() {
+        System.out.println("Inicializando recursos do sistema...");
+    }
+
+    public StatusEnum getEstado() {
+        return (StatusEnum) state;
+    }
 }

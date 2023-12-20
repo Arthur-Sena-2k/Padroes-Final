@@ -3,7 +3,6 @@ package model;
 public class ProcessoPublicadora extends Publicadora {
     private String descricao;
 
-    // Método que executa a lógica principal do processo
     public void executarProcesso() {
         // Lógica do processo...
         // Após algo importante acontecer dentro da publicadora, notifica os assinantes
@@ -14,5 +13,4 @@ public class ProcessoPublicadora extends Publicadora {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    // Outros métodos relevantes para o processo, se houver...
 }

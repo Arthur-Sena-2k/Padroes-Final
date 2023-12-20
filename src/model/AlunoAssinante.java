@@ -14,4 +14,3 @@ public class AlunoAssinante implements Assinante {
 }
 
 
-// Implemente outras classes de assinantes conforme necessário
